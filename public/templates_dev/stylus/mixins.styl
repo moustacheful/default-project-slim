@@ -1,0 +1,20 @@
+circle(radius)
+    width radius
+    height radius
+    border-radius 50%
+
+stagger(iterations,delay)
+    stagger-animation iterations delay
+    stagger-transition iterations delay
+
+stagger-animation(iterations,delay,offset=0s)
+    iterations -= 1
+    for iteration in (0..iterations)
+        &:nth-child({iteration})
+            animation-delay (delay*iteration)+offset
+
+stagger-transition(iterations,delay)
+    iterations -= 1
+    for iteration in (0..iterations)
+        &:nth-child({iteration})
+            transition-delay delay*iteration
