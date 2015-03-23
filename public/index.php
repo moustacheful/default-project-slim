@@ -8,6 +8,10 @@ switch($_SERVER['SERVER_NAME']){
         $env = "development";
     break;
 
+    case "x.herokuapp.com":
+        $env = "staging";
+    break;
+
     default:
         $env = "production";
     break;
@@ -42,9 +46,10 @@ $FBAuth = function() use(&$loggedInUser,$app){
     };
 };
 
-$app->get('/',function() use ($app){
+$app->get('/',function() use ($app,&$config){
     $app->render('index.php',array(
-        'url' => SITE_URL
+        'url' => SITE_URL,
+        'fb_app_id' => $config['fb']['appId']
     ));
 });
 
