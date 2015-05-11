@@ -61,7 +61,7 @@ $app->configureMode('production', function () use ($app) {
 
 // DI
 $app->container->singleton('util',function(){
-    return new \Util();
+    return new Util();
 });
 
 ?>
