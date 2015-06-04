@@ -1,6 +1,6 @@
 <?php
 require '../vendor/autoload.php';
-Dotenv::load('../');
+if(class_exists('Dotenv')) Dotenv::load('../');
 
 // Instantiate app
 $app = new \Slim\Slim();
