@@ -45,7 +45,7 @@ class UserController {
 		$user = R::findOne('user','fbid = ?',[$user_id]);
 
 		if(!$user){
-			$fb_user = (new FacebookRequest($session,'GET','/me'))
+			$fb_user = (new FacebookRequest($session,'GET','/me?fields=first_name,last_name,name,id,gender,email'))
 				->execute()
 				->getGraphObject(GraphUser::className());
 
