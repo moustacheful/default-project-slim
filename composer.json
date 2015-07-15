@@ -8,7 +8,7 @@
                 "name": "redbeanphp",
                 "version": "master",
                 "dist": {
-                    "url": "http://www.eanphp.com/downloadredbean.php",
+                    "url": "http://www.redbeanphp.com/downloadredbean.php",
                     "type": "tar"
                 }
             }
@@ -16,9 +16,11 @@
 
     ],
     "require": {
+        "ext-mbstring": "*",
         "redbeanphp": "master@dev",
         "slim/slim": "~2.4",
-        "facebook/php-sdk-v4": "~4.0"
+        "facebook/php-sdk-v4": "~4.0",
+        "anahkiasen/underscore-php": "^2.0"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^1.1"
