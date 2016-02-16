@@ -1,0 +1,7 @@
+ENVIRONMENT=local
+DB_NAME=
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+SITE_URL=http://localhost
+DEBUG=FALSE
