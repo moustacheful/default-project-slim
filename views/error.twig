@@ -1,0 +1,7 @@
+{% extends 'layouts/default.twig' %}
+{% block title %} Ocurrió un error. {% endblock %}
+{% block body %}
+<h1>Error</h1>
+<h2>${ response.message }</h2>
+<pre>${ response.stack }</pre>
+{% endblock %}

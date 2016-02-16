@@ -1,39 +1,16 @@
 {
     "name": "moustacheful/default_project_slim",
     "description": "A Slim + redbean base for APIs and simple apps",
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "redbeanphp",
-                "version": "master",
-                "dist": {
-                    "url": "http://www.redbeanphp.com/downloadredbean.php",
-                    "type": "tar"
-                }
-            }
-        }
-
-    ],
     "require": {
         "ext-mbstring": "*",
-        "redbeanphp": "master@dev",
-        "slim/slim": "~2.4",
-        "facebook/php-sdk-v4": "~4.0",
-        "anahkiasen/underscore-php": "^2.0"
+        "anahkiasen/underscore-php": "^2.0",
+        "slim/slim": "^3.1",
+        "raveren/kint": "^1.0",
+        "slim/twig-view": "^2.0",
+        "gabordemooij/redbean": "^4.3"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^1.1"
-    },
-    "autoload": {
-        "files": [
-            "vendor/redbeanphp/rb.php"
-        ],
-        "classmap": [
-            "app/model",
-            "app/middleware",
-            "app/controller"
-        ]
     },
     "authors": [
         {

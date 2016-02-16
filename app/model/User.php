@@ -1,5 +1,5 @@
 <?php
-class Model_User extends RedBean_SimpleModel {
+class Model_User extends \RedBeanPHP\SimpleModel {
 
     public function open() {
     }
